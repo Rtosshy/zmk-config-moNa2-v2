@@ -39,8 +39,8 @@ layers:
   - TAB
   - LEFT COMMAND
   - {t: ENTER, h: '2'}
-  - {t: SPACE, h: '3'}
-  - BACKSPACE
+  - {t: BACKSPACE, h: '3'}
+  - SPACE
   - LEFT SHIFT
   - '~'
   '1':
