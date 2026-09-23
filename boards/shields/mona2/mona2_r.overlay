@@ -1,6 +1,66 @@
 #include "mona2.dtsi"
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+
+
+/ {
+    // トラックボール Y 軸を ⌘=/⌘- に離散化してズームを実現する
+    //   mode=1   : 4 方向（X/Y いずれか強い方だけ発火）
+    //   tick=80  : 80 カウント分動かすと 1 回発火（暴発防止のため少し鈍めに）
+    //   threshold=5 : これ未満の微小移動は無視
+    zip_keybind_zoom: zip_keybind_zoom {
+        compatible = "zmk,input-processor-keybind";
+        #input-processor-cells = <0>;
+        bindings =
+            <&none>,            // X+ (右): 未使用
+            <&none>,            // X- (左): 未使用
+            <&kp LG(MINUS)>,    // Y+ : ズームアウト
+            <&kp LG(EQUAL)>;    // Y- : ズームイン
+        mode = <1>;
+        tick = <80>;
+        threshold = <5>;
+        wait-ms = <0>;
+        tap-ms = <20>;
+        track_remainders;
+    };
+
+    // remainderを蓄積しない scaler (driftのような連続微小値を確実に 0 化する)
+    //   標準 zip_xy_scaler は track-remainders 有効で、±1 が連続すると累積で
+    //   出力されてしまうため drift の暴走を抑えきれない。track-remainders を
+    //   付けないことで、整数除算の余りは毎回捨てる挙動になる。
+    zip_xy_drop: zip_xy_drop {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_X>, <INPUT_REL_Y>;
+    };
+
+    // トラックボールの動きをスクロールキーに離散化する (drift 抑制版)
+    //   tick=30   : 30カウント蓄積で1段スクロール (連続感は zip_scroll_scaler 1/30 と同等)
+    //   threshold=3 : ±2以下のdrift微小値を完全に切り捨てる
+    //   wait-ms=40 : 連続発火の最小間隔40ms (上限25Hz、高速回転時のオーバーシュート抑制)
+    //   mode=1   : 4方向（X/Y いずれか強い方だけ発火）
+    // ※切り分け中: bindings を &msc から &kp に置き換え。zip_keybind 経由で
+    //   &msc が発火しない可能性を確認するため、PageDown/PageUp で代替。
+    zip_keybind_scroll: zip_keybind_scroll {
+        compatible = "zmk,input-processor-keybind";
+        #input-processor-cells = <0>;
+        bindings =
+            <&none>,            // X+ : 未使用 (横スクロール対応はあとで)
+            <&none>,             // X- : 未使用
+            <&kp PAGE_DOWN>,    // Y+ : 下スクロール
+            <&kp PAGE_UP>;      // Y- : 上スクロール
+        mode = <1>;
+        tick = <30>;
+        threshold = <3>;
+        wait-ms = <40>;
+        tap-ms = <20>;
+        track_remainders;
+    };
+};
 
 
 &default_transform {
@@ -68,14 +128,32 @@
     status = "okay";
     device = <&trackball_central>;
 
+    // Layer 3: トラックボールでスクロール
+    //   連続変換 (zip_xy_to_scroll_mapper) を使い、drift は前段の
+    //   zip_xy_drop (remainder無蓄積) で完全にデッドゾーン化する。
+    //
+    //   zip_xy_drop 1 6 の効果: 入力 1/6 倍 (整数演算で切り捨て、累積なし)
+    //     ±1〜±5 → 毎回 0 (drift を確実に全カット、累積で漏れない)
+    //     ±6 → 1, ±12 → 2, ±18 → 3 (通常motionは通す)
+    //   zip_scroll_scaler 1 5 で更に 1/5、合計 1/30 で元と同じ感度
     scroller {
         layers = <3>;
-        input-processors = 
-            // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,        //X軸とY軸の入れ替え
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       //X軸反転
-            <&zip_xy_to_scroll_mapper>,                         //スクロールモードに変更
-            <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,   //スクロールのX軸反転
-            <&zip_scroll_scaler 1 5>;                           //スクロール量を1/4倍
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
+            <&zip_xy_drop 1 6>,
+            <&zip_xy_to_scroll_mapper>,
+            <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
+            <&zip_scroll_scaler 1 5>;
+    };
+
+    // Layer 6 (/-hold): トラックボール上下でズームイン/アウト
+    //   zip_keybind_zoom で Y 軸の移動量を ⌘= / ⌘- に変換
+    //   zip_xy_scaler 0 1 で XY を無効化してポインタが動かないようにする（本家ZMK使用時のワークアラウンド）
+    zoomer {
+        layers = <6>;
+        input-processors =
+            <&zip_keybind_zoom>,
+            <&zip_xy_scaler 0 1>;
     };
 
 };

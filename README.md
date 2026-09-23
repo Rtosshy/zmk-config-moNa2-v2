@@ -1,6 +1,10 @@
 # zmk-config-moNa2
 
-<img src="keymap-drawer/mona2_01.svg">
+## Keymap
+
+![moNa2 keymap](keymap-drawer/mona2.svg)
+
+`config/mona2.keymap` の変更を push すると GitHub Actions ([draw.yml](.github/workflows/draw.yml)) が上図を自動更新します。
 
 # COROPITを使用するへ
 
