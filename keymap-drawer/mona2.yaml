@@ -27,7 +27,7 @@ layers:
   - C
   - V
   - B
-  - {t: '`', h: '4'}
+  - {t: '-', h: '4'}
   - +
   - N
   - M
@@ -42,7 +42,7 @@ layers:
   - {t: SPACE, h: '3'}
   - BACKSPACE
   - LEFT SHIFT
-  - '-'
+  - '~'
   '1':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -94,7 +94,7 @@ layers:
   - +
   - ^
   - '&'
-  - '~'
+  - '*'
   - (
   - )
   - /
@@ -102,12 +102,12 @@ layers:
   - '5'
   - '6'
   - '*'
-  - _
+  - '`'
   - '!'
   - '@'
   - '#'
-  - $
-  - '%'
+  - '['
+  - ']'
   - {t: '0', h: LEFT SHIFT}
   - '1'
   - '2'
@@ -115,11 +115,11 @@ layers:
   - .
   - '='
   - {t: ▽, type: trans}
-  - '['
-  - ']'
+  - $
+  - '%'
+  - \
   - '{'
   - '}'
-  - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
