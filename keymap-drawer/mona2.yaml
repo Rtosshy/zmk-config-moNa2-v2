@@ -6,7 +6,7 @@ layers:
   - E
   - R
   - T
-  - Y
+  - {t: Y, h: toggle}
   - U
   - I
   - O
@@ -16,7 +16,7 @@ layers:
   - D
   - F
   - G
-  - F13
+  - BT CLR ALL
   - H
   - J
   - K
@@ -28,7 +28,7 @@ layers:
   - V
   - B
   - F14
-  - F15
+  - {t: BT, h: '0'}
   - N
   - M
   - ','
