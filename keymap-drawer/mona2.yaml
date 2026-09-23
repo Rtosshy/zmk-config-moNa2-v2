@@ -35,9 +35,9 @@ layers:
   - .
   - {t: /, h: '6'}
   - LEFT COMMAND
+  - TAB
   - LEFT ALT
   - {t: ESC, h: LEFT CONTROL}
-  - TAB
   - {t: SPACE, h: '2'}
   - {t: INT MUHENKAN, h: '3'}
   - BACKSPACE
