@@ -137,7 +137,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - HOME
-  - UP ARROW
+  - {t: ▽, type: trans}
   - END
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -146,9 +146,9 @@ layers:
   - Ctl+Gui+LEFT ARROW
   - Ctl+Gui+RIGHT ARROW
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LEFT ARROW
+  - {t: LEFT ARROW, h: toggle}
   - DOWN ARROW
+  - UP ARROW
   - RIGHT ARROW
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
