@@ -40,9 +40,9 @@ layers:
   - {t: ESC, h: LEFT CONTROL}
   - {t: SPACE, h: '2'}
   - {t: INT MUHENKAN, h: '3'}
-  - '-'
+  - BACKSPACE
   - LEFT SHIFT
-  - \
+  - ENTER
   '1':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
