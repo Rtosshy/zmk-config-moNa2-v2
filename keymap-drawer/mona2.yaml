@@ -34,15 +34,15 @@ layers:
   - ','
   - .
   - {t: /, h: '6'}
-  - LEFT COMMAND
-  - TAB
+  - {t: ESC, h: LCTRL}
   - LEFT ALT
-  - {t: ESC, h: LEFT CONTROL}
-  - {t: SPACE, h: '2'}
-  - {t: Ctl+SPACE, h: '3'}
+  - TAB
+  - LEFT COMMAND
+  - {t: ENTER, h: '2'}
+  - {t: SPACE, h: '3'}
   - BACKSPACE
   - LEFT SHIFT
-  - ENTER
+  - '-'
   '1':
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
