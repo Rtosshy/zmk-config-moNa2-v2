@@ -6,8 +6,8 @@ layers:
   - E
   - R
   - T
-  - Y
-  - U
+  - BT CLR ALL
+  - {t: BT, h: '0'}
   - I
   - O
   - P
