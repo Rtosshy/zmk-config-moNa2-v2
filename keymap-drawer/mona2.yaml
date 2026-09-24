@@ -34,9 +34,9 @@ layers:
   - ','
   - .
   - {t: /, h: BT}
-  - {t: ESC, h: LCTRL}
+  - {t: TAB, h: LEFT CONTROL}
   - LEFT ALT
-  - TAB
+  - ESCAPE
   - LEFT COMMAND
   - {t: ENTER, h: signs}
   - {t: BACKSPACE, h: arrows}
