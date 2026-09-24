@@ -129,16 +129,5 @@
 
             sensor-bindings = <&scroll_up_down>;
         };
-
-        SCROLL {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
-
-            sensor-bindings = <&zoom_in_out>, <&zoom_in_out>;
-        };
     };
 };
