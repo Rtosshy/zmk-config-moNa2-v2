@@ -66,7 +66,7 @@
             bindings = <
 &kp Q                    &kp W         &kp E    &kp R             &kp T                                               &kp Y           &kp U  &kp I      &kp O    &kp P
 &kp A                    &kp S         &kp D    &kp F             &kp G                           &lt 4 SINGLE_QUOTE  &kp H           &kp J  &kp K      &kp L    &kp SEMI
-&mt LEFT_SHIFT Z         &kp X         &kp C    &kp V             &kp B        &lt 5 PLUS         &kp MINUS           &kp N           &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT Z         &kp X         &kp C    &kp V             &kp B        &lt 5 EQUAL        &kp MINUS           &kp N           &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &mt LEFT_CONTROL ESCAPE  &kp LEFT_ALT  &kp TAB  &kp LEFT_COMMAND  &lt 2 ENTER  &lt 3 BACKSPACE    &kp SPACE           &kp LEFT_SHIFT                             &kp TILDE
             >;
 
