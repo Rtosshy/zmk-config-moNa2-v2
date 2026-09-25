@@ -16,7 +16,7 @@ layers:
   - D
   - F
   - G
-  - ''''
+  - {t: '''', h: BT}
   - H
   - J
   - K
@@ -27,16 +27,16 @@ layers:
   - C
   - V
   - B
-  - {t: '-', h: '5'}
-  - +
+  - {t: +, h: '5'}
+  - '-'
   - N
   - M
   - ','
   - .
-  - {t: /, h: BT}
-  - {t: TAB, h: LEFT CONTROL}
+  - /
+  - {t: ESCAPE, h: LEFT CONTROL}
   - LEFT ALT
-  - ESCAPE
+  - TAB
   - LEFT COMMAND
   - {t: ENTER, h: signs}
   - {t: BACKSPACE, h: arrows}
@@ -188,7 +188,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -205,7 +205,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: BT CLR, type: held}
+  - BT CLR
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
