@@ -67,7 +67,7 @@
 &kp Q                    &kp W         &kp E    &kp R             &kp T                                             &kp Y           &kp U  &kp I      &kp O    &kp P
 &kp A                    &kp S         &kp D    &lt 5 F           &kp G                           &kp MINUS         &kp H           &kp J  &kp K      &kp L    &kp SEMI
 &mt LEFT_SHIFT Z         &kp X         &kp C    &kp V             &kp B        &kp EQUAL          &kp SINGLE_QUOTE  &kp N           &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mt LEFT_CONTROL ESCAPE  &kp LEFT_ALT  &kp TAB  &kp LEFT_COMMAND  &lt 2 ENTER  &lt 3 BACKSPACE    &lt 4 SPACE       &kp LEFT_SHIFT                             &kp TILDE
+&mt LEFT_CONTROL ESCAPE  &kp LEFT_ALT  &kp TAB  &kp LEFT_COMMAND  &lt 2 ENTER  &lt 3 BACKSPACE    &lt 4 SPACE       &kp LEFT_SHIFT                             &kp BACKSLASH
             >;
 
             sensor-bindings =
