@@ -42,7 +42,7 @@ layers:
   - {t: BACKSPACE, h: arrows}
   - {t: SPACE, h: BT}
   - LEFT SHIFT
-  - '~'
+  - \
   fns:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
