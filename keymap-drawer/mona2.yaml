@@ -14,9 +14,9 @@ layers:
   - A
   - S
   - D
-  - F
+  - {t: F, h: '5'}
   - G
-  - {t: '''', h: BT}
+  - '-'
   - H
   - J
   - K
@@ -27,8 +27,8 @@ layers:
   - C
   - V
   - B
-  - {t: '=', h: '5'}
-  - '-'
+  - '='
+  - ''''
   - N
   - M
   - ','
@@ -40,7 +40,7 @@ layers:
   - LEFT COMMAND
   - {t: ENTER, h: signs}
   - {t: BACKSPACE, h: arrows}
-  - SPACE
+  - {t: SPACE, h: BT}
   - LEFT SHIFT
   - '~'
   fns:
@@ -188,7 +188,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -212,7 +212,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - BT CLR ALL
   '5':
@@ -229,7 +229,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -242,7 +242,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&msc SCRL_RIGHT'
   - '&msc SCRL_UP'
