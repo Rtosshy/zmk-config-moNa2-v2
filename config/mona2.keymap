@@ -88,10 +88,10 @@
 
         signs {
             bindings = <
-&kp MINUS          &kp N7  &kp N8  &kp N9  &kp PLUS                              &kp CARET        &kp AMPERSAND  &kp ASTRK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH          &kp N4  &kp N5  &kp N6  &kp ASTERISK               &kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN    &kp HASH       &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&mt LEFT_SHIFT N0  &kp N1  &kp N2  &kp N3  &kp PERIOD    &kp EQUAL    &trans     &kp DOLLAR       &kp PERCENT    &kp BACKSLASH  &kp LEFT_BRACE        &kp RIGHT_BRACE
-&trans             &trans  &trans  &trans  &trans        &trans       &trans     &trans                                                               &kp PIPE
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5                       &kp N6  &kp N7  &kp N8  &kp N9            &kp N0
+&trans  &trans  &trans  &trans  &trans            &kp GRAVE  &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans  &trans  &trans  &kp LEFT_BRACE    &kp RIGHT_BRACE
+&trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans                                    &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
