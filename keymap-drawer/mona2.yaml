@@ -104,8 +104,8 @@ layers:
   - {t: ▽, type: trans}
   - '`'
   - {t: ▽, type: trans}
-  - GLOBE
-  - {t: ▽, type: trans}
+  - LANG1
+  - LANG2
   - '['
   - ']'
   - {t: ▽, type: trans}
