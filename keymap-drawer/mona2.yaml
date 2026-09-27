@@ -104,7 +104,7 @@ layers:
   - {t: ▽, type: trans}
   - '`'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - GLOBE
   - {t: ▽, type: trans}
   - '['
   - ']'
