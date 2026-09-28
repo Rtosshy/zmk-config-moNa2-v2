@@ -34,7 +34,7 @@ layers:
   - ','
   - .
   - /
-  - {t: ESCAPE, h: LEFT CONTROL}
+  - {t: ESCAPE, h: CAPSLOCK}
   - LEFT ALT
   - TAB
   - LEFT COMMAND
