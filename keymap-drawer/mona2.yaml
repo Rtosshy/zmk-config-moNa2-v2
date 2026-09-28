@@ -27,20 +27,20 @@ layers:
   - C
   - V
   - B
-  - '='
+  - {t: '=', h: BT}
   - ''''
   - N
   - M
   - ','
   - .
   - /
-  - {t: ESCAPE, h: CAPSLOCK}
+  - {t: ESCAPE, h: LEFT CONTROL}
   - LEFT ALT
   - TAB
   - LEFT COMMAND
   - {t: ENTER, h: signs}
   - {t: BACKSPACE, h: arrows}
-  - {t: SPACE, h: BT}
+  - SPACE
   - LEFT SHIFT
   - \
   fns:
@@ -199,7 +199,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -212,7 +212,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - BT CLR ALL
   '5':
