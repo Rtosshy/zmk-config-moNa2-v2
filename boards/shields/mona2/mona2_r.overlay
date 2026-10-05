@@ -128,7 +128,7 @@
     status = "okay";
     device = <&trackball_central>;
 
-    // Layer 3: トラックボールでスクロール
+    // Layer 1: トラックボールでスクロール
     //   連続変換 (zip_xy_to_scroll_mapper) を使い、drift は前段の
     //   zip_xy_drop (remainder無蓄積) で完全にデッドゾーン化する。
     //
@@ -137,7 +137,7 @@
     //     ±6 → 1, ±12 → 2, ±18 → 3 (通常motionは通す)
     //   zip_scroll_scaler 1 5 で更に 1/5、合計 1/30 で元と同じ感度
     scroller {
-        layers = <3>;
+        layers = <1>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
             <&zip_xy_drop 1 6>,
