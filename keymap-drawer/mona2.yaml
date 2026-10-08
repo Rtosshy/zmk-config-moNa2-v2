@@ -34,13 +34,13 @@ layers:
   - ','
   - .
   - /
-  - {t: ESCAPE, h: LEFT CONTROL}
+  - {t: SPACE, h: LEFT CONTROL}
   - LEFT ALT
   - TAB
   - LEFT COMMAND
   - {t: ENTER, h: arrows}
   - {t: BACKSPACE, h: signs}
-  - SPACE
+  - ESCAPE
   - LEFT SHIFT
   - \
   arrows:
