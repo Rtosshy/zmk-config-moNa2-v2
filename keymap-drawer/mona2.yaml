@@ -11,8 +11,8 @@ layers:
   - I
   - O
   - P
-  - A
-  - S
+  - {t: A, h: LCTRL}
+  - {t: S, h: LCTRL}
   - D
   - {t: F, h: '5'}
   - G
