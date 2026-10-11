@@ -11,8 +11,8 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: LCTRL}
-  - {t: S, h: LCTRL}
+  - A
+  - S
   - D
   - {t: F, h: '5'}
   - G
@@ -21,7 +21,7 @@ layers:
   - J
   - K
   - L
-  - ;
+  - {t: ;, h: LCTRL}
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
@@ -104,8 +104,6 @@ layers:
   - {t: ▽, type: trans}
   - '`'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - '['
   - ']'
   - {t: ▽, type: trans}
@@ -120,6 +118,8 @@ layers:
   - {t: ▽, type: trans}
   - '{'
   - '}'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
