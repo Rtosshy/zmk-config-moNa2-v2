@@ -29,7 +29,9 @@ tags: [mona2, battery, macos, zmk]
 
 ## 残量を確認する
 
-macOS の `ioreg` や `system_profiler` では moNa2 の残量は取れない。`BTLEServer` のログに約1分おきに記録されているので、それを読む。
+**Mac の Bluetooth メニューやバッテリーウィジェットの数字は使わない。** 左右の区別なく1つの数字しか出ず、左手側（ほとんど減らない）の値が出ていることがある。それを見て「まだ余裕がある」と判断すると、右手側の電池切れを見逃す。
+
+macOS の `ioreg` や `system_profiler` でも moNa2 の残量は取れない。`BTLEServer` のログに約1分おきに左右別で記録されているので、それを読む。
 
 ```sh
 /usr/bin/log show --last 1h --info \
